@@ -18,9 +18,9 @@ namespace TheGreatEscape
         {
             Console.WriteLine("What would you like your Adventuring Name to be?");
             CharacterName = Console.ReadLine();
-            if (!string.IsNullOrEmpty(CharacterName = "Bob"));
+            if (string.IsNullOrWhiteSpace(CharacterName)) CharacterName = "Bob";
             
-            Dialog.ChatOp("Your Character name is: " + CharacterName + "! Huzzahhh","green","");
+            Dialog.ChatOp("Your Character name is: " + CharacterName + "! Huzzahhh","green");
         }
 
     }

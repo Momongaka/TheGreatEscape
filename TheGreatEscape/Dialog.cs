@@ -9,12 +9,12 @@ namespace TheGreatEscape
             Console.Title = "The Great Escape";
             Console.SetWindowSize(100,35);
             string Start = @"
-  _____ _             ____                _     _____                          
- |_   _| |__   ___   / ___|_ __ ___  __ _| |_  | ____|___  ___ __ _ _ __   ___ 
-   | | | '_ \ / _ \ | |  _| '__/ _ \/ _` | __| |  _| / __|/ __/ _` | '_ \ / _ \
-   | | | | | |  __/ | |_| | | |  __| (_| | |_  | |___\__ | (_| (_| | |_) |  __/
-   |_| |_| |_|\___|  \____|_|  \___|\__,_|\__| |_____|___/\___\__,_| .__/ \___|
-                                                                   |_|         
+          _____ _             ____                _     _____                          
+         |_   _| |__   ___   / ___|_ __ ___  __ _| |_  | ____|___  ___ __ _ _ __   ___ 
+           | | | '_ \ / _ \ | |  _| '__/ _ \/ _` | __| |  _| / __|/ __/ _` | '_ \ / _ \
+           | | | | | |  __/ | |_| | | |  __| (_| | |_  | |___\__ | (_| (_| | |_) |  __/
+           |_| |_| |_|\___|  \____|_|  \___|\__,_|\__| |_____|___/\___\__,_| .__/ \___|
+                                                                           |_|         
 ";
             Console.ForegroundColor = ConsoleColor.Cyan;
             //Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}",Start));
@@ -22,11 +22,11 @@ namespace TheGreatEscape
             Console.ResetColor();
             //Console.WriteLine("Press enter to start");
             //Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Press enter to start"));
-            ChatOp("Press Enter To star","","center");
+            ChatOp("Press Enter To star",align:"center");
             Console.ReadKey();
             Console.Clear();
         }
-        public static void ChatOp(string message, string color, string align)
+        public static void ChatOp(string message, string color="", string align="")
         {
             if (color== "red")
             { Console.ForegroundColor = ConsoleColor.Red; }
