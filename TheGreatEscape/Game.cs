@@ -2,23 +2,25 @@ using System;
 
 namespace TheGreatEscape
 {
-    public class Game
+    public abstract class Game
     {
         private static string CharacterName { get; set; }
 
         public static void StartGame()
         {
-            Dialog.ChatOp("The Great Escape!","cyan");
-            Dialog.ChatOp("Try Not to Die too Much!","cyan");
+            
+            Dialog.GameTitle();
             NameCharacter();
+            Choice.PChoice();
         }
 
         public static void NameCharacter()
         {
             Console.WriteLine("What would you like your Adventuring Name to be?");
             CharacterName = Console.ReadLine();
+            if (!string.IsNullOrEmpty(CharacterName = "Bob"));
             
-            Dialog.ChatOp("Your Character name is: " + CharacterName + "! Huzzahhh","green");
+            Dialog.ChatOp("Your Character name is: " + CharacterName + "! Huzzahhh","green","");
         }
 
     }
