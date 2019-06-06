@@ -16,6 +16,7 @@ namespace TheGreatEscape
         static void Main(string[] args)
         {
             Game.StartGame();
+            Scenario1.Round1();
             Console.ReadKey();
         }
     }
